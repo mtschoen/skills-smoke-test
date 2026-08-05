@@ -70,7 +70,7 @@ After you finish the implementation but before you declare completion:
 
 When invoked as `smoke-test --init` (or asked to "set up a SMOKE.md" / "advertise this project's smoke test"), **don't run a smoke test - author one instead.** A `SMOKE.md` lets every future agent (and the user) run the right smoke test for this project without re-deriving it, which is what closes the gap between "I should smoke test" and "I ran the project's actual smoke test."
 
-1. **Inspect the project.** Identify the build system and entry points from the project files (`*.csproj`, `package.json`, `Cargo.toml`, `go.mod`, `pyproject.toml`), existing run/test scripts, CI config, and any `CLAUDE.md`/`README` notes on building and running. Reuse commands that already exist - don't invent new ones.
+1. **Inspect the project.** Identify the build system and entry points from the project files (`*.csproj`, `package.json`, `Cargo.toml`, `go.mod`, `pyproject.toml`), existing run/test scripts, CI config, and any `AGENTS.md`/`CLAUDE.md`/`README` notes on building and running. Reuse commands that already exist - don't invent new ones.
 2. **Draft the floor and bar.** The floor is the build/compile/start command. The bar is the command that exercises the changed behavior (run the CLI, hit the endpoint, run the relevant tests). Be concrete and copy-pasteable.
 3. **Capture setup and cleanup.** Note any required env vars, services, or fixtures, and any cleanup the user expects (e.g. "kill the Unity process with `taskkill //IM Unity.exe //F` after launching").
 4. **Write `SMOKE.md` to the project root** using the template below, then show it to the user for confirmation. Keep it short - a smoke test someone will actually run, not a test plan.
